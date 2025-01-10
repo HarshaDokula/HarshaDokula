@@ -1,16 +1,37 @@
+main{
+    flex: 1;
+}
+
+div {
+    padding: 20px;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
+    width: 100%;
     background-color: #f4f4f4;
     padding: 20px;
     text-align: center;
 }
 
+footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
 nav {
+    width: 100%;
     background-color: black;
 }
 
@@ -34,12 +55,6 @@ nav ul li a {
 
 section {
     padding: 20px;
-}
-
-footer {
-    background-color: #f4f4f4;
-    padding: 10px;
-    text-align: center;
 }
 
 .inactive-link {
