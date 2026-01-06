@@ -4,7 +4,7 @@ async function loadTemplates() {
         // Determine the path to templates based on current location
         const isInPages = window.location.pathname.includes('/pages/');
         const templatesPath = isInPages ? '../templates' : 'templates';
-        
+
         // Load header
         const headerResponse = await fetch(`${templatesPath}/header.html`);
         const headerContent = await headerResponse.text();
@@ -39,12 +39,12 @@ async function loadTemplates() {
     }
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     loadTemplates();
-    
+
     const images = document.querySelectorAll(".cert-image");
-    images.forEach(function(img) {
-        img.onerror = function() {
+    images.forEach(function (img) {
+        img.onerror = function () {
             // Hide the entire parent container of the image if it fails to load
             img.parentElement.style.display = "none";
         };
