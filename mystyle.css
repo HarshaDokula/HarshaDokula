@@ -2,28 +2,33 @@
     box-sizing: border-box;
 }
 
-main{
+main {
     flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 div {
     padding: 20px;
+    box-sizing: border-box;
 }
 
-blockquote{
-    margin:0%;
+blockquote {
+    margin: 0%;
     padding: 0;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure body takes full viewport height */
+    min-height: 100vh;
+    /* Ensure body takes full viewport height */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    max-width: 100%;
-    overflow-x: hidden;
+    width: 100%;
 }
 
 header {
@@ -35,7 +40,8 @@ header {
 }
 
 footer {
-    margin-top: auto; /* Pushes footer to the bottom */
+    margin-top: auto;
+    /* Pushes footer to the bottom */
     width: 100%;
     background-color: #f4f4f4;
     padding: 10px;
@@ -69,12 +75,16 @@ nav ul li a {
 
 section {
     padding: 20px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .inactive-link {
     pointer-events: none;
     cursor: default;
-    color: grey;  /* Optional: you can style it to look different */
+    color: grey;
+    /* Optional: you can style it to look different */
     text-decoration: none;
 }
 
@@ -108,7 +118,8 @@ section {
 .certification img {
     width: 100%;
     height: auto;
-    max-width: 400px; /* Adjust the max-width as needed */
+    max-width: 400px;
+    /* Adjust the max-width as needed */
     display: block;
     margin: 0;
     border-radius: 4px;
@@ -118,7 +129,9 @@ section {
     width: 100%;
     height: auto;
     max-height: 70px;
-    max-width: 70px; /* Adjust the max-width as needed */
+    max-width: 70px;
+    /* Adjust the max-width as needed */
     display: block;
-    margin-left: 20px; /* Space between text and image */
+    margin-left: 20px;
+    /* Space between text and image */
 }
