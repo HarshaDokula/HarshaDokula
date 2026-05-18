@@ -1,2 +1,4 @@
-# Apple private
 .DS_Store
+*.log
+node_modules/
+*.original.png
