@@ -34,7 +34,20 @@
   applyTheme(theme);
 
   toggleInput.addEventListener('change', function() {
-    applyTheme(this.checked ? 'dark' : 'light');
+    const goingDark = this.checked;
+    if (goingDark) {
+      // Light → Dark: sudden and harsh, just switch
+      applyTheme('dark');
+    } else {
+      // Dark → Light: create overlay, switch theme underneath, fade overlay out
+      const overlay = document.createElement('div');
+      overlay.className = 'theme-overlay';
+      document.body.appendChild(overlay);
+      applyTheme('light');
+      setTimeout(function() {
+        overlay.remove();
+      }, 1200);
+    }
   });
 })();
 
