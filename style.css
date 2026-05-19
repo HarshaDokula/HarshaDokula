@@ -2,6 +2,11 @@
    Monolith Portfolio — Theme Variables & Component Styles
    ===================================================== */
 
+/* ---------- HTML Scroll Behavior ---------- */
+html {
+  scroll-padding-top: 80px;
+}
+
 /* ---------- Theme Variables — Light (Monolith Resume) ---------- */
 :root {
   --color-surface: #f9f9f9;
