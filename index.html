@@ -1,110 +1,907 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="scroll-smooth" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sriharsha Dokula's Portfolio</title>
-    <meta name="description"
-        content="Portfolio of Sriharsha Dokula — Full-Stack Developer. Explore projects, certifications, and resume.">
-    <meta name="theme-color" content="#f4f4f4">
-    <link rel="preconnect" href="https://www.linkedin.com">
-    <link rel="preconnect" href="https://github.com">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Sriharsha Dokula",
-        "jobTitle": "Full-Stack Developer",
-        "url": "https://sriharshadokula.com",
-        "sameAs": [
-            "https://www.linkedin.com/in/sriharshadokula/",
-            "https://github.com/HarshaDokula"
-        ],
-        "email": "sdokula1@binghamton.edu"
-    }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sriharsha Dokula | Engineer Portfolio</title>
+<meta content="Portfolio of Sriharsha Dokula — Full-Stack Developer. Explore projects, certifications, and resume." name="description"/>
+<meta content="#f9f9f9" name="theme-color" id="theme-meta"/>
+<link href="/assets/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://www.linkedin.com" rel="preconnect"/>
+<link href="https://github.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              // Light mode (Monolith Resume) — default
+              surface: 'var(--color-surface)',
+              'surface-dim': 'var(--color-surface-dim)',
+              'surface-bright': 'var(--color-surface-bright)',
+              'surface-container-lowest': 'var(--color-surface-container-lowest)',
+              'surface-container-low': 'var(--color-surface-container-low)',
+              'surface-container': 'var(--color-surface-container)',
+              'surface-container-high': 'var(--color-surface-container-high)',
+              'surface-container-highest': 'var(--color-surface-container-highest)',
+              'on-surface': 'var(--color-on-surface)',
+              'on-surface-variant': 'var(--color-on-surface-variant)',
+              'inverse-surface': 'var(--color-inverse-surface)',
+              'inverse-on-surface': 'var(--color-inverse-on-surface)',
+              outline: 'var(--color-outline)',
+              'outline-variant': 'var(--color-outline-variant)',
+              'surface-tint': 'var(--color-surface-tint)',
+              primary: 'var(--color-primary)',
+              'on-primary': 'var(--color-on-primary)',
+              'primary-container': 'var(--color-primary-container)',
+              'on-primary-container': 'var(--color-on-primary-container)',
+              'inverse-primary': 'var(--color-inverse-primary)',
+              secondary: 'var(--color-secondary)',
+              'on-secondary': 'var(--color-on-secondary)',
+              'secondary-container': 'var(--color-secondary-container)',
+              'on-secondary-container': 'var(--color-on-secondary-container)',
+              tertiary: 'var(--color-tertiary)',
+              'on-tertiary': 'var(--color-on-tertiary)',
+              'tertiary-container': 'var(--color-tertiary-container)',
+              'on-tertiary-container': 'var(--color-on-tertiary-container)',
+              error: 'var(--color-error)',
+              'on-error': 'var(--color-on-error)',
+              'error-container': 'var(--color-error-container)',
+              'on-error-container': 'var(--color-on-error-container)',
+              'primary-fixed': 'var(--color-primary-fixed)',
+              'primary-fixed-dim': 'var(--color-primary-fixed-dim)',
+              'on-primary-fixed': 'var(--color-on-primary-fixed)',
+              'on-primary-fixed-variant': 'var(--color-on-primary-fixed-variant)',
+              'secondary-fixed': 'var(--color-secondary-fixed)',
+              'secondary-fixed-dim': 'var(--color-secondary-fixed-dim)',
+              'on-secondary-fixed': 'var(--color-on-secondary-fixed)',
+              'on-secondary-fixed-variant': 'var(--color-on-secondary-fixed-variant)',
+              'tertiary-fixed': 'var(--color-tertiary-fixed)',
+              'tertiary-fixed-dim': 'var(--color-tertiary-fixed-dim)',
+              'on-tertiary-fixed': 'var(--color-on-tertiary-fixed)',
+              'on-tertiary-fixed-variant': 'var(--color-on-tertiary-fixed-variant)',
+              background: 'var(--color-background)',
+              'on-background': 'var(--color-on-background)',
+              'surface-variant': 'var(--color-surface-variant)',
+              'subtle-surface': 'var(--color-subtle-surface)',
+              'border-muted': 'var(--color-border-muted)',
+              'text-tertiary': 'var(--color-text-tertiary)',
+            },
+            borderRadius: {
+              DEFAULT: 'var(--radius-default)',
+              sm: 'var(--radius-sm)',
+              md: 'var(--radius-md)',
+              lg: 'var(--radius-lg)',
+              xl: 'var(--radius-xl)',
+              full: '9999px',
+            },
+            spacing: {
+              'page-margin': '3rem',
+              'section-gap': '2.5rem',
+              'entry-gap': '1.5rem',
+              'inline-gap': '0.5rem',
+              'container-max': '800px',
+              'margin-mobile': '1.5rem',
+            },
+            fontFamily: {
+              'display-name': ['Inter', 'sans-serif'],
+              'section-title': ['Inter', 'sans-serif'],
+              'entry-title': ['Inter', 'sans-serif'],
+              'body-sm': ['Inter', 'sans-serif'],
+              'meta-label': ['Inter', 'sans-serif'],
+              'display-lg': ['var(--font-display-lg)', 'sans-serif'],
+              'headline-md': ['var(--font-headline-md)', 'sans-serif'],
+              'body-md': ['var(--font-body-md)', 'sans-serif'],
+              'body-main': ['var(--font-body-md)', 'sans-serif'],
+              'label-caps': ['var(--font-label-caps)', 'sans-serif'],
+              caption: ['var(--font-caption)', 'sans-serif'],
+            },
+            fontSize: {
+              'display-name': ['48px', { lineHeight: '1.1', letterSpacing: '-0.04em', fontWeight: '700' }],
+              'display-name-mobile': ['32px', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '700' }],
+              'section-title': ['13px', { lineHeight: '16px', letterSpacing: '0.1em', fontWeight: '700' }],
+              'entry-title': ['18px', { lineHeight: '24px', letterSpacing: '-0.01em', fontWeight: '600' }],
+              'body-sm': ['13px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+              'meta-label': ['13px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+              'display-lg': ['var(--font-size-display-lg)', { lineHeight: 'var(--lh-display-lg)', letterSpacing: 'var(--ls-display-lg)', fontWeight: '700' }],
+              'display-lg-mobile': ['var(--font-size-display-lg-mobile)', { lineHeight: 'var(--lh-display-lg-mobile)', letterSpacing: 'var(--ls-display-lg-mobile)', fontWeight: '700' }],
+              'headline-md': ['var(--font-size-headline-md)', { lineHeight: 'var(--lh-headline-md)', letterSpacing: 'var(--ls-headline-md)', fontWeight: '600' }],
+              'body-md': ['var(--font-size-body-md)', { lineHeight: 'var(--lh-body-md)', letterSpacing: 'var(--ls-body-md)', fontWeight: '400' }],
+              'body-main': ['var(--font-size-body-md)', { lineHeight: 'var(--lh-body-md)', letterSpacing: 'var(--ls-body-md)', fontWeight: '400' }],
+              'label-caps': ['var(--font-size-label-caps)', { lineHeight: 'var(--lh-label-caps)', letterSpacing: 'var(--ls-label-caps)', fontWeight: '500' }],
+              caption: ['var(--font-size-caption)', { lineHeight: 'var(--lh-caption)', fontWeight: '400' }],
+            },
+          },
+        },
+      }
     </script>
+<style>
+        /* === Theme Variables — Light (Monolith Resume) === */
+        :root {
+          --color-surface: #f9f9f9;
+          --color-surface-dim: #dadada;
+          --color-surface-bright: #f9f9f9;
+          --color-surface-container-lowest: #ffffff;
+          --color-surface-container-low: #f3f3f4;
+          --color-surface-container: #eeeeee;
+          --color-surface-container-high: #e8e8e8;
+          --color-surface-container-highest: #e2e2e2;
+          --color-on-surface: #1a1c1c;
+          --color-on-surface-variant: #4c4546;
+          --color-inverse-surface: #2f3131;
+          --color-inverse-on-surface: #f0f1f1;
+          --color-outline: #7e7576;
+          --color-outline-variant: #cfc4c5;
+          --color-surface-tint: #5e5e5e;
+          --color-primary: #000000;
+          --color-on-primary: #ffffff;
+          --color-primary-container: #1b1b1b;
+          --color-on-primary-container: #848484;
+          --color-inverse-primary: #c6c6c6;
+          --color-secondary: #5e5e5e;
+          --color-on-secondary: #ffffff;
+          --color-secondary-container: #e4e2e2;
+          --color-on-secondary-container: #646464;
+          --color-tertiary: #000000;
+          --color-on-tertiary: #ffffff;
+          --color-tertiary-container: #1b1b1b;
+          --color-on-tertiary-container: #848484;
+          --color-error: #ba1a1a;
+          --color-on-error: #ffffff;
+          --color-error-container: #ffdad6;
+          --color-on-error-container: #93000a;
+          --color-primary-fixed: #e2e2e2;
+          --color-primary-fixed-dim: #c6c6c6;
+          --color-on-primary-fixed: #1b1b1b;
+          --color-on-primary-fixed-variant: #474747;
+          --color-secondary-fixed: #e4e2e2;
+          --color-secondary-fixed-dim: #c8c6c6;
+          --color-on-secondary-fixed: #1b1c1c;
+          --color-on-secondary-fixed-variant: #474747;
+          --color-tertiary-fixed: #e2e2e2;
+          --color-tertiary-fixed-dim: #c6c6c6;
+          --color-on-tertiary-fixed: #1b1b1b;
+          --color-on-tertiary-fixed-variant: #474747;
+          --color-background: #f9f9f9;
+          --color-on-background: #1a1c1c;
+          --color-surface-variant: #e2e2e2;
+          --color-subtle-surface: #F4F4F4;
+          --color-border-muted: #E5E5E5;
+          --color-text-tertiary: #737373;
+
+          /* Light typography — all Inter */
+          --font-display-lg: 'Inter';
+          --font-headline-md: 'Inter';
+          --font-body-md: 'Inter';
+          --font-label-caps: 'Inter';
+          --font-caption: 'Inter';
+
+          --font-size-display-lg: 48px;
+          --lh-display-lg: 1.1;
+          --ls-display-lg: -0.04em;
+          --font-size-display-lg-mobile: 32px;
+          --lh-display-lg-mobile: 1.2;
+          --ls-display-lg-mobile: -0.02em;
+          --font-size-headline-md: 18px;
+          --lh-headline-md: 24px;
+          --ls-headline-md: -0.01em;
+          --font-size-body-md: 15px;
+          --lh-body-md: 24px;
+          --ls-body-md: 0px;
+          --font-size-label-caps: 13px;
+          --lh-label-caps: 16px;
+          --ls-label-caps: 0.1em;
+          --font-size-caption: 13px;
+          --lh-caption: 20px;
+
+          /* Light radii — soft 4px */
+          --radius-default: 0.25rem;
+          --radius-sm: 0.125rem;
+          --radius-md: 0.375rem;
+          --radius-lg: 0.5rem;
+          --radius-xl: 0.75rem;
+
+          /* Light — section header divider color */
+          --divider-color: #E5E5E5;
+        }
+
+        /* === Theme Variables — Dark (Monolith Dark) === */
+        .dark {
+          --color-surface: #141313;
+          --color-surface-dim: #141313;
+          --color-surface-bright: #3a3939;
+          --color-surface-container-lowest: #0e0e0e;
+          --color-surface-container-low: #1c1b1b;
+          --color-surface-container: #201f1f;
+          --color-surface-container-high: #2a2a2a;
+          --color-surface-container-highest: #353434;
+          --color-on-surface: #e5e2e1;
+          --color-on-surface-variant: #c4c7c8;
+          --color-inverse-surface: #e5e2e1;
+          --color-inverse-on-surface: #313030;
+          --color-outline: #8e9192;
+          --color-outline-variant: #444748;
+          --color-surface-tint: #c6c6c7;
+          --color-primary: #ffffff;
+          --color-on-primary: #2f3131;
+          --color-primary-container: #e2e2e2;
+          --color-on-primary-container: #636565;
+          --color-inverse-primary: #5d5f5f;
+          --color-secondary: #c7c6c6;
+          --color-on-secondary: #2f3131;
+          --color-secondary-container: #484949;
+          --color-on-secondary-container: #b8b8b8;
+          --color-tertiary: #ffffff;
+          --color-on-tertiary: #2f3131;
+          --color-tertiary-container: #e2e2e2;
+          --color-on-tertiary-container: #636565;
+          --color-error: #ffb4ab;
+          --color-on-error: #690005;
+          --color-error-container: #93000a;
+          --color-on-error-container: #ffdad6;
+          --color-primary-fixed: #e2e2e2;
+          --color-primary-fixed-dim: #c6c6c7;
+          --color-on-primary-fixed: #1a1c1c;
+          --color-on-primary-fixed-variant: #454747;
+          --color-secondary-fixed: #e3e2e2;
+          --color-secondary-fixed-dim: #c7c6c6;
+          --color-on-secondary-fixed: #1a1c1c;
+          --color-on-secondary-fixed-variant: #464747;
+          --color-tertiary-fixed: #e2e2e2;
+          --color-tertiary-fixed-dim: #c6c6c7;
+          --color-on-tertiary-fixed: #1a1c1c;
+          --color-on-tertiary-fixed-variant: #454747;
+          --color-background: #141313;
+          --color-on-background: #e5e2e1;
+          --color-surface-variant: #353434;
+          --color-subtle-surface: #201f1f;
+          --color-border-muted: #444748;
+          --color-text-tertiary: #8e9192;
+
+          /* Dark typography — Hanken Grotesk + Inter + JetBrains Mono */
+          --font-display-lg: 'Hanken Grotesk';
+          --font-headline-md: 'Hanken Grotesk';
+          --font-body-md: 'Inter';
+          --font-label-caps: 'JetBrains Mono';
+          --font-caption: 'Inter';
+
+          --font-size-display-lg: 48px;
+          --lh-display-lg: 1.1;
+          --ls-display-lg: -0.02em;
+          --font-size-display-lg-mobile: 36px;
+          --lh-display-lg-mobile: 1.2;
+          --ls-display-lg-mobile: -0.02em;
+          --font-size-headline-md: 18px;
+          --lh-headline-md: 24px;
+          --ls-headline-md: -0.01em;
+          --font-size-body-md: 16px;
+          --lh-body-md: 1.6;
+          --ls-body-md: 0px;
+          --font-size-label-caps: 12px;
+          --lh-label-caps: 1.5;
+          --ls-label-caps: 0.1em;
+          --font-size-caption: 14px;
+          --lh-caption: 1.4;
+
+          /* Dark radii — sharp (0) */
+          --radius-default: 0;
+          --radius-sm: 0;
+          --radius-md: 0;
+          --radius-lg: 0;
+          --radius-xl: 0;
+
+          /* Dark — section header divider color */
+          --divider-color: #444748;
+        }
+
+        /* === Base Styles === */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        .link-underlined {
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-text-tertiary);
+            transition: opacity 0.2s;
+        }
+        .link-underlined:hover {
+            opacity: 0.7;
+        }
+        ::selection {
+            background-color: var(--color-primary-fixed);
+            color: var(--color-on-primary-fixed);
+        }
+
+        /* Skill chips - light uses 4px radius, dark uses 0 */
+        .skill-chip {
+            display: inline-flex;
+            padding: 4px 12px;
+            background: var(--color-subtle-surface);
+            color: var(--color-on-surface);
+            font-size: 13px;
+            line-height: 20px;
+            border-radius: var(--radius-default);
+            font-family: var(--font-caption);
+        }
+
+        /* Card/container — no shadow, flat */
+        .card-container {
+            background: var(--color-subtle-surface);
+            border: 1px solid var(--color-border-muted);
+            padding: 1.5rem;
+            border-radius: var(--radius-default);
+        }
+
+        /* Section header line */
+        .section-divider {
+            height: 1px;
+            flex: 1;
+            background: var(--divider-color);
+        }
+
+        /* Certificate card */
+        .cert-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--color-subtle-surface);
+            border: 1px solid var(--color-border-muted);
+            border-radius: var(--radius-default);
+        }
+
+        /* Theme toggle button */
+        #theme-toggle .dark-icon { display: none; }
+        .dark #theme-toggle .dark-icon { display: inline; }
+        .dark #theme-toggle .light-icon { display: none; }
+        /* Knob slide animation */
+        #theme-toggle input:checked ~ div > span {
+          transform: translateX(20px);
+        }
+
+        /* Resume entries */
+        .resume-entry + .resume-entry {
+            margin-top: 2.5rem;
+        }
+
+        /* List styling — dark mode uses sharp squares */
+        .styled-list {
+            list-style: none;
+            padding-left: 1.25rem;
+        }
+        .styled-list li {
+            position: relative;
+            padding-left: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-body-md);
+            font-size: var(--font-size-body-md);
+            line-height: var(--lh-body-md);
+            color: var(--color-on-surface);
+        }
+        .styled-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 6px;
+            height: 6px;
+            background: var(--color-primary);
+            border-radius: var(--radius-default);
+        }
+        .dark .styled-list li::before {
+            border-radius: 0;
+        }
+
+        /* Project card */
+        .project-card {
+            padding: 1.5rem;
+            background: var(--color-subtle-surface);
+            border: 1px solid var(--color-border-muted);
+            border-radius: var(--radius-default);
+            transition: border-color 0.2s;
+        }
+        .project-card:hover {
+            border-color: var(--color-primary);
+        }
+
+        /* CTA section box */
+        .cta-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--color-surface-container-high);
+            border: 1px solid transparent;
+            border-radius: var(--radius-default);
+        }
+
+        /* Header scroll shadow */
+        header {
+            transition: box-shadow 0.2s;
+        }
+        header.shadow-scroll {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .dark header.shadow-scroll {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* Nav link active state */
+        .nav-link {
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-family: var(--font-body-md);
+            font-size: var(--font-size-body-md);
+            transition: color 0.2s;
+        }
+        .nav-link:hover {
+            color: var(--color-primary);
+        }
+        .nav-link.active {
+            color: var(--color-primary);
+            font-weight: 600;
+            border-bottom: 1px solid var(--color-primary);
+            padding-bottom: 2px;
+        }
+
+        /* Forged inline icons — use simple SVG or text labels */
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 4px;
+            stroke: currentColor;
+            fill: none;
+        }
+
+        /* Tag meta */
+        .tag-meta {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--color-on-surface);
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: var(--font-label-caps);
+        }
+
+        @media (max-width: 768px) {
+          :root {
+            --font-size-display-lg: 32px;
+          }
+          .dark {
+            --font-size-display-lg: 36px;
+          }
+        }
+    </style>
 </head>
+<body class="bg-background text-on-surface font-body-main selection:bg-primary-fixed selection:text-on-primary-fixed">
 
-<body>
+<!-- ===== TopAppBar ===== -->
+<header class="bg-surface-container-lowest border-b border-border-muted sticky top-0 z-50 relative">
+<div class="max-w-[800px] mx-auto px-6 md:px-page-margin flex justify-between items-center h-20">
+  <a href="#" class="font-bold text-[20px] md:text-[22px] uppercase tracking-[-0.04em] text-primary no-underline shrink-0" style="font-family:var(--font-display-lg)">SRIHARSHA DOKULA</a>
+  <nav class="hidden md:flex gap-10 items-center mx-6">
+    <a class="nav-link" href="#experience">Experience</a>
+    <a class="nav-link" href="#education">Education</a>
+    <a class="nav-link" href="#skills">Skills</a>
+    <a class="nav-link" href="#projects">Projects</a>
+  </nav>
+  <a href="/assets/resume/Sriharsha_Dokula.pdf" download="sriharsha_dokula.pdf" class="bg-primary text-on-primary px-6 py-3 font-bold font-caption no-underline transition-opacity duration-200 hover:opacity-90 rounded-lg shrink-0" style="font-size:14px">
+    Download CV
+  </a>
+</div>
+<!-- Theme toggle switch — floats on right edge -->
+<label id="theme-toggle" class="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 inline-flex items-center cursor-pointer" aria-label="Toggle theme">
+  <input type="checkbox" value="" class="sr-only peer">
+  <div class="w-11 h-6 rounded-full border border-border-muted transition-colors duration-200 flex items-center px-[2px]" style="background:var(--color-surface-container-high)">
+    <span class="h-5 w-5 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm" style="background:var(--color-on-surface)">
+      <span class="material-symbols-outlined text-[11px] light-icon" style="color:var(--color-surface-container-lowest)">light_mode</span>
+      <span class="material-symbols-outlined text-[11px] dark-icon" style="color:var(--color-surface-container-lowest)">dark_mode</span>
+    </span>
+  </div>
+</label>
+</header>
 
-    <header>
-        <h1>Sriharsha Dokula</h1>
-        <p>Irving, TX | (607) 595 7798 | <a href="mailto:sdokula1@binghamton.edu">sdokula1@binghamton.edu</a></p>
-        <p>
-            <a href="https://www.linkedin.com/in/sriharshadokula/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-            <a href="https://github.com/HarshaDokula" target="_blank" rel="noopener noreferrer">GitHub</a>
+<!-- ===== Main Content ===== -->
+<main class="max-w-[800px] mx-auto px-6 md:px-page-margin py-12 md:py-16 bg-surface-container-lowest min-h-screen">
+
+  <!-- === Header / Intro === -->
+  <section class="mb-section-gap">
+    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Engineer</h2>
+    <div class="flex flex-wrap gap-x-6 gap-y-2 text-secondary font-caption">
+      <a class="flex items-center gap-1 link-underlined text-text-tertiary" href="mailto:harshadokula@gmail.com">
+        <svg class="contact-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h11A1.5 1.5 0 0 1 15 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5v.217l6 3.75 6-3.75V3.5a.5.5 0 0 0-.5-.5h-11zM14 4.933l-5.7 3.563a.5.5 0 0 1-.6 0L2 4.933V12.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V4.933z" fill="currentColor"/></svg>
+        harshadokula@gmail.com
+      </a>
+      <span class="flex items-center gap-1">
+        <svg class="contact-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="currentColor"/></svg>
+        Irving, TX
+      </span>
+      <span class="flex items-center gap-1">
+        <svg class="contact-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" fill="currentColor"/><path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill="currentColor"/></svg>
+        (607) 595-7798
+      </span>
+      <a class="flex items-center gap-1 link-underlined text-text-tertiary" href="https://www.linkedin.com/in/sriharshadokula/" target="_blank">
+        <svg class="contact-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.483 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" fill="currentColor"/></svg>
+        LinkedIn
+      </a>
+      <a class="flex items-center gap-1 link-underlined text-text-tertiary" href="https://github.com/HarshaDokula" target="_blank">
+        <svg class="contact-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" fill="currentColor"/></svg>
+        GitHub
+      </a>
+      <span class="flex items-center gap-1">
+        <svg class="contact-icon" viewBox="0 0 16 16" width="16" height="16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="currentColor"/></svg>
+        Irving, TX
+      </span>
+    </div>
+  </section>
+
+  <!-- === Professional Summary === -->
+  <section class="mb-section-gap">
+    <div class="flex items-center gap-4 mb-4">
+      <h3 class="font-section-title text-section-title text-primary whitespace-nowrap uppercase tracking-widest">SUMMARY</h3>
+      <div class="section-divider"></div>
+    </div>
+    <p class="font-body-main text-body-main text-on-surface leading-relaxed">
+      Full Stack Developer with 4.5+ years of experience specializing in Python development, cloud infrastructure automation, and DevOps practices. Proven expertise in building scalable backend services, automating cloud deployments, and implementing infrastructure as code solutions. Strong background in cloud platforms (AWS, Azure), containerization (Docker), and configuration management (Ansible), with extensive Python scripting experience for automation and operational efficiency.
+    </p>
+  </section>
+
+  <!-- === Experience === -->
+  <section class="mb-section-gap" id="experience">
+    <div class="flex items-center gap-4 mb-entry-gap">
+      <h3 class="font-section-title text-section-title text-primary whitespace-nowrap uppercase tracking-widest">EXPERIENCE</h3>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Zapcom -->
+    <div class="resume-entry">
+      <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+        <h4 class="font-entry-title text-entry-title text-primary">Full-Stack Developer</h4>
+        <span class="font-meta-label text-meta-label text-on-surface-variant">Mar 2025 – Present</span>
+      </div>
+      <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Zapcom.ai</div>
+      <ul class="styled-list">
+        <li>Architected and deployed cloud infrastructure using Python automation scripts, implementing infrastructure as code practices for scalable and reproducible deployments across AWS environments</li>
+        <li>Built AI pipelines using Azure ML Studio with Python, enabling automated model training, experimentation, and deployment workflows for enterprise use cases</li>
+        <li>Secured and migrated a compromised production website to a modern cloud-based architecture, implementing infrastructure hardening using AWS WAF, access controls, and best practices with automated deployment pipelines</li>
+      </ul>
+    </div>
+
+    <!-- SUNY Binghamton -->
+    <div class="resume-entry">
+      <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+        <h4 class="font-entry-title text-entry-title text-primary">Research Assistant</h4>
+        <span class="font-meta-label text-meta-label text-on-surface-variant">Jul 2024 – Mar 2025</span>
+      </div>
+      <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">SUNY Binghamton</div>
+      <ul class="styled-list">
+        <li>Assisted in comprehensive literature review, meticulously gathering and analyzing relevant information for the Tensor-Aware Energy Accounting project under <a href="https://www.cs.binghamton.edu/~davidl/" target="_blank" class="link-underlined text-text-tertiary">Prof. David Liu</a></li>
+        <li>Conducted detailed code reviews across multiple programming languages and design styles to understand engineering requirements, utilizing tools like Git and VS Code</li>
+        <li>Contributing to the development and enhancement of the Tensor-Aware Energy Accounting framework for machine learning</li>
+      </ul>
+    </div>
+
+    <!-- Cognizant SDE -->
+    <div class="resume-entry">
+      <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+        <h4 class="font-entry-title text-entry-title text-primary">Software Developer</h4>
+        <span class="font-meta-label text-meta-label text-on-surface-variant">Jul 2019 – Dec 2021</span>
+      </div>
+      <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Cognizant</div>
+      <ul class="styled-list">
+        <li>Spearheaded the design, development, and testing of Python automation scripts and REST APIs, significantly reducing manual workload by 85% and improving operational efficiency in Privileged Identity Management (PIM) solutions</li>
+        <li>Automated infrastructure deployment and configuration management using Ansible playbooks and Python scripts, streamlining deployment processes and reducing setup time by 60%</li>
+        <li>Implemented automated workflows utilizing Python and REST APIs, replacing 14 manual maintenance workflows, resulting in significant time and cost savings through infrastructure automation</li>
+        <li>Conceptualized and executed Proof of Concepts (POCs) on CyberArk components including Enterprise Password Vault (EPV), Application Access Manager (AAM), and Privileged Threat Analytics (PTA), validating their effectiveness — which led to the adoption of AAM</li>
+        <li>Utilized Splunk integration for automatic monitoring and automation of daily onboarding of users and accounts to CyberArk, enhancing operational workflows and reducing manual intervention</li>
+        <li>Authored comprehensive documentation outlining post-production technical support procedures, contributing to a 95% decrease in resolution time for post-production technical issues</li>
+        <li>Mentored and trained over 100 interns on CyberArk, ensuring smooth onboarding and fostering a culture of continuous learning and professional development</li>
+      </ul>
+    </div>
+
+    <!-- Cognizant Analyst -->
+    <div class="resume-entry">
+      <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+        <h4 class="font-entry-title text-entry-title text-primary">Program Analyst</h4>
+        <span class="font-meta-label text-meta-label text-on-surface-variant">Jan 2019 – Jun 2019</span>
+      </div>
+      <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Cognizant</div>
+      <ul class="styled-list">
+        <li>Developed Python-based automation solutions for infrastructure management and monitoring, optimizing operational efficiency and reducing manual effort</li>
+        <li>Implemented automated reporting tool using Python to detect vulnerable systems, providing visualized data for actionable insights across a network of over 10,000 edge nodes</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- === Education === -->
+  <section class="mb-section-gap" id="education">
+    <div class="flex items-center gap-4 mb-entry-gap">
+      <h3 class="font-section-title text-section-title text-primary whitespace-nowrap uppercase tracking-widest">EDUCATION</h3>
+      <div class="section-divider"></div>
+    </div>
+    <div class="space-y-section-gap">
+      <div class="resume-entry">
+        <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+          <h4 class="font-entry-title text-entry-title text-primary">Binghamton University, SUNY</h4>
+          <span class="font-meta-label text-meta-label text-on-surface-variant">2023 – 2024</span>
+        </div>
+        <div class="font-body-main text-on-surface">Master of Science in Computer Science &bull; CGPA: 3.9/4.00</div>
+        <div class="font-caption text-text-tertiary mt-1 italic">Design &amp; Analysis of Computer Algorithms, Computer Architecture &amp; Organization, Operating Systems, Programming Languages, Database Systems, Hardware and Security Systems, Design Patterns</div>
+      </div>
+      <div class="resume-entry">
+        <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+          <h4 class="font-entry-title text-entry-title text-primary">GITAM University, India</h4>
+          <span class="font-meta-label text-meta-label text-on-surface-variant">2015 – 2019</span>
+        </div>
+        <div class="font-body-main text-on-surface">Bachelor of Technology in CS &amp; Engineering &bull; GPA: 8.35/10.0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Technical Skills === -->
+  <section class="mb-section-gap" id="skills">
+    <div class="flex items-center gap-4 mb-entry-gap">
+      <h3 class="font-section-title text-section-title text-primary whitespace-nowrap uppercase tracking-widest">TECHNICAL SKILLS</h3>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+      <div>
+        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Languages &amp; Frameworks</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Java</span>
+          <span class="skill-chip">C++</span>
+          <span class="skill-chip">JavaScript</span>
+          <span class="skill-chip">ReactJS</span>
+          <span class="skill-chip">Redux</span>
+          <span class="skill-chip">TypeScript</span>
+          <span class="skill-chip">Bash</span>
+        </div>
+      </div>
+      <div>
+        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Cloud &amp; DevOps</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-chip">AWS</span>
+          <span class="skill-chip">Azure</span>
+          <span class="skill-chip">Ansible</span>
+          <span class="skill-chip">Docker</span>
+          <span class="skill-chip">CI/CD</span>
+          <span class="skill-chip">Git</span>
+          <span class="skill-chip">Linux</span>
+          <span class="skill-chip">IaC</span>
+        </div>
+      </div>
+      <div>
+        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Databases</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-chip">SQL</span>
+          <span class="skill-chip">PL/SQL</span>
+          <span class="skill-chip">MongoDB</span>
+        </div>
+      </div>
+      <div>
+        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Additional</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-chip">PowerShell</span>
+          <span class="skill-chip">Bash</span>
+          <span class="skill-chip">REST APIs</span>
+          <span class="skill-chip">IaC</span>
+          <span class="skill-chip">VS Code</span>
+          <span class="skill-chip">Jupyter</span>
+          <span class="skill-chip">Vim</span>
+        </div>
+      </div>
+      <div>
+        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">IAM &amp; Security</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="skill-chip">CyberArk Vault</span>
+          <span class="skill-chip">CPM</span>
+          <span class="skill-chip">PSM</span>
+          <span class="skill-chip">PVWA</span>
+          <span class="skill-chip">AAM</span>
+          <span class="skill-chip">Okta</span>
+          <span class="skill-chip">Splunk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Certifications === -->
+  <section class="mb-section-gap" id="certifications">
+    <div class="flex items-center gap-4 mb-entry-gap">
+      <h3 class="font-section-title text-section-title text-primary whitespace-nowrap uppercase tracking-widest">CERTIFICATIONS</h3>
+      <div class="section-divider"></div>
+    </div>
+    <div class="flex flex-col gap-4">
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary shrink-0"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <div>
+          <h4 class="font-entry-title text-entry-title text-primary">CompTIA Security+</h4>
+          <p class="font-caption text-text-tertiary">Cybersecurity core knowledge and skills &bull; Certified 2018</p>
+          <a href="https://www.credly.com/badges/ec73a8c0-b751-4c55-95b3-669e6005d593/public_url" target="_blank" class="font-caption link-underlined text-text-tertiary text-[12px]">Verify</a>
+        </div>
+      </div>
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary shrink-0"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <div>
+          <h4 class="font-entry-title text-entry-title text-primary">CyberArk Certified Trustee</h4>
+          <p class="font-caption text-text-tertiary">Privileged Access Management (PAM) expertise</p>
+          <span class="font-caption text-text-tertiary text-[12px] opacity-60">Verification link unavailable</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary shrink-0"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        <div>
+          <h4 class="font-entry-title text-entry-title text-primary">GitHub Foundations</h4>
+          <p class="font-caption text-text-tertiary">Version control and collaboration workflows</p>
+          <a href="https://www.credly.com/badges/fa553e14-753e-4067-8ded-70a373e0de93/linked_in_profile" target="_blank" class="font-caption link-underlined text-text-tertiary text-[12px]">Verify</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Projects === -->
+  <section class="mb-section-gap" id="projects">
+    <div class="flex items-center gap-4 mb-entry-gap">
+      <h3 class="font-section-title text-section-title text-primary whitespace-nowrap uppercase tracking-widest">PROJECTS</h3>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- jcarbon -->
+      <div class="project-card">
+        <div class="flex justify-between items-start mb-4">
+          <h4 class="font-entry-title text-entry-title text-primary">jcarbon</h4>
+          <a class="text-secondary hover:text-primary transition-colors" href="https://github.com/project-jcarbon/jcarbon" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
+          A Java-based library for system-wide energy usage tracking on Intel-Linux environments, providing actionable metrics for power-aware computing.
         </p>
-    </header>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-meta">Java</span>
+          <span class="tag-meta">TensorFlow</span>
+        </div>
+      </div>
 
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="/index.html">About</a></li>
-            <li><a href="/pages/experience.html">Experience</a></li>
-            <li><a href="/pages/projects.html">Projects</a></li>
-            <li><a href="/pages/certifications.html">Certifications</a></li>
-        </ul>
-    </nav>
+      <!-- Quick Draw Clone -->
+      <div class="project-card">
+        <div class="flex justify-between items-start mb-4">
+          <h4 class="font-entry-title text-entry-title text-primary">Quick Draw Clone</h4>
+          <a class="text-secondary hover:text-primary transition-colors" href="https://github.com/sanjaydokula/draw" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+        <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
+          Browser-based sketch recognition game using public ML models and datasets, replicating Google's "Quick, Draw!" for web environments.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-meta">HTML/JS</span>
+          <span class="tag-meta">ML/AI</span>
+        </div>
+      </div>
 
-    <main>
-        <h1>About Me</h1>
+      <!-- xv6 Shared Memory -->
+      <div class="project-card">
+        <div class="flex justify-between items-start mb-4">
+          <h4 class="font-entry-title text-entry-title text-primary">xv6 Shared Memory</h4>
+          <span class="text-secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </span>
+        </div>
+        <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
+          Extended the xv6 teaching operating system to support shared memory pages between processes via system calls for efficient inter-process communication.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-meta">C++</span>
+          <span class="tag-meta">Kernel Dev</span>
+        </div>
+      </div>
 
-        <section>
-            <blockquote>
-                Hello! I'm Sriharsha Dokula, a passionate software developer with over 3.5+ years of professional
-                experience in automation, identity governance, and full-stack development. My core competencies include
-                Python scripting, REST API integrations, and CyberArk tools.
+      <!-- CTA box -->
+      <div class="cta-box">
+        <p class="text-center font-caption mb-4 text-secondary">Looking for the full offline version?</p>
+        <a href="/assets/resume/Sriharsha_Dokula.pdf" download="sriharsha_dokula.pdf" class="bg-primary text-on-primary px-6 py-2 font-bold font-caption no-underline transition-transform hover:scale-105" style="border-radius:var(--radius-default)">
+          Download PDF
+        </a>
+      </div>
+    </div>
+  </section>
 
-                Currently, I am working as a Full-Stack Developer at Zapcom, where I focus on designing and developing
-                scalable, web-based applications. My role involves working across the tech stack to deliver robust and
-                user-centric solutions that meet business objectives.
+</main>
 
-                Previously, I worked as a Research Assistant at Binghamton University, collaborating with <a
-                    href="https://www.cs.binghamton.edu/~davidl/" target="_blank" rel="noopener noreferrer">Prof. David
-                    Liu</a> on innovative
-                research in energy-efficient machine learning systems. Notably, I contributed to the project <a
-                    href="https://arxiv.org/pdf/2311.11424" target="_blank" rel="noopener noreferrer">Tensor-Aware
-                    Energy Accounting</a> aimed at
-                optimizing energy usage in ML frameworks.
+<!-- ===== Footer ===== -->
+<footer class="bg-surface-container-lowest border-t border-border-muted">
+<div class="max-w-[800px] mx-auto px-6 md:px-page-margin py-entry-gap flex flex-col md:flex-row justify-between items-center gap-4">
+  <span class="font-meta-label text-meta-label text-text-tertiary uppercase tracking-wider">SRIHARSHA DOKULA</span>
+  <div class="flex gap-6 items-center">
+    <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100" href="https://github.com/HarshaDokula" target="_blank">GitHub</a>
+    <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/sriharshadokula/" target="_blank">LinkedIn</a>
+    <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100" href="mailto:harshadokula@gmail.com">Email</a>
+  </div>
+  <p class="font-caption text-text-tertiary opacity-60">&copy; 2026 Sriharsha Dokula. Built with precision.</p>
+</div>
+</footer>
 
-                Beyond work, I am an avid follower of Formula 1, fascinated by the blend of speed, precision, and
-                technology. I also enjoy photography and trekking, which offer creative and refreshing escapes from the
-                digital world.
-            </blockquote>
+<script>
+// === Theme management ===
+(function() {
+  const html = document.documentElement;
+  const metaTheme = document.getElementById('theme-meta');
+  const toggleLabel = document.getElementById('theme-toggle');
+  const toggleInput = toggleLabel.querySelector('input[type="checkbox"]');
 
-            <p>
-                Feel free to connect with me on
-                <a href="https://www.linkedin.com/in/sriharshadokula/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a>
-                or explore my work on
-                <a href="https://github.com/HarshaDokula" target="_blank" rel="noopener noreferrer">GitHub</a>.
-                Let&rsquo;s collaborate and build impactful solutions together!
-            </p>
+  // Determine initial theme
+  const stored = localStorage.getItem('theme');
+  let theme;
+  if (stored) {
+    theme = stored;
+  } else {
+    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
 
-            <p>
-                For a detailed overview of my professional background with some sprinkle✨ of keywords, you can
-                <a href="./assets/resume/Sriharsha_Dokula.pdf" download="sriharsha_dokula.pdf">download my
-                    resume</a>.
-            </p>
-        </section>
+  function applyTheme(t) {
+    if (t === 'dark') {
+      html.classList.add('dark');
+      metaTheme.setAttribute('content', '#141313');
+      toggleInput.checked = true;
+    } else {
+      html.classList.remove('dark');
+      metaTheme.setAttribute('content', '#f9f9f9');
+      toggleInput.checked = false;
+    }
+    localStorage.setItem('theme', t);
+  }
 
-        <h1>About this page</h1>
+  applyTheme(theme);
 
-        <section>
-            <p>It's obvious that this page lacks design. This page is not meant for displaying my designing
-                capabilities.
-                This was meant to keep it simple and maintainable without great efforts and hence this blandness.</p>
-        </section>
-    </main>
+  toggleInput.addEventListener('change', function() {
+    const next = this.checked ? 'dark' : 'light';
+    applyTheme(next);
+  });
+})();
 
-    <footer>
-        <p>&copy; 2026 Sriharsha Dokula</p>
-    </footer>
+// === Scroll handling for header shadow ===
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
+  if (window.scrollY > 20) {
+    header.classList.add('shadow-scroll');
+  } else {
+    header.classList.remove('shadow-scroll');
+  }
+});
 
-    <script src="script.js"></script>
-    <script src="gtag.js"></script>
+// === Intersection Observer for nav highlighting ===
+(function() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(function(section) {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 150) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+})();
+</script>
+<script src="gtag.js"></script>
 </body>
-
 </html>

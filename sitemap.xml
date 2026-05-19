@@ -4,12 +4,4 @@
     <loc>https://sriharshadokula.com/</loc>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://sriharshadokula.com/pages/certifications.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sriharshadokula.com/pages/resume.html</loc>
-    <priority>0.8</priority>
-  </url>
 </urlset>
