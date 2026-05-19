@@ -70,7 +70,7 @@ window.addEventListener('scroll', function() {
     let current = '';
     sections.forEach(function(section) {
       const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 150) {
+      if (pageYOffset >= sectionTop - 100) {
         current = section.getAttribute('id');
       }
     });

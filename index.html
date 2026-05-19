@@ -2,6 +2,8 @@
 <html class="scroll-smooth" lang="en">
 
 <head>
+  <!-- Prevent flash of wrong theme: apply dark class before paint -->
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')})()</script>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Sriharsha Dokula | Engineer Portfolio</title>
