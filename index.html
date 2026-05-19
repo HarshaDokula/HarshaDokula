@@ -1,477 +1,550 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sriharsha Dokula | Engineer Portfolio</title>
-<meta content="Portfolio of Sriharsha Dokula — Full-Stack Developer. Explore projects, certifications, and resume." name="description"/>
-<meta content="#f9f9f9" name="theme-color" id="theme-meta"/>
-<link href="/assets/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="style.css" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              surface: 'var(--color-surface)',
-              'surface-dim': 'var(--color-surface-dim)',
-              'surface-bright': 'var(--color-surface-bright)',
-              'surface-container-lowest': 'var(--color-surface-container-lowest)',
-              'surface-container-low': 'var(--color-surface-container-low)',
-              'surface-container': 'var(--color-surface-container)',
-              'surface-container-high': 'var(--color-surface-container-high)',
-              'surface-container-highest': 'var(--color-surface-container-highest)',
-              'on-surface': 'var(--color-on-surface)',
-              'on-surface-variant': 'var(--color-on-surface-variant)',
-              'inverse-surface': 'var(--color-inverse-surface)',
-              'inverse-on-surface': 'var(--color-inverse-on-surface)',
-              outline: 'var(--color-outline)',
-              'outline-variant': 'var(--color-outline-variant)',
-              'surface-tint': 'var(--color-surface-tint)',
-              primary: 'var(--color-primary)',
-              'on-primary': 'var(--color-on-primary)',
-              'primary-container': 'var(--color-primary-container)',
-              'on-primary-container': 'var(--color-on-primary-container)',
-              'inverse-primary': 'var(--color-inverse-primary)',
-              secondary: 'var(--color-secondary)',
-              'on-secondary': 'var(--color-on-secondary)',
-              'secondary-container': 'var(--color-secondary-container)',
-              'on-secondary-container': 'var(--color-on-secondary-container)',
-              tertiary: 'var(--color-tertiary)',
-              'on-tertiary': 'var(--color-on-tertiary)',
-              'tertiary-container': 'var(--color-tertiary-container)',
-              'on-tertiary-container': 'var(--color-on-tertiary-container)',
-              error: 'var(--color-error)',
-              'on-error': 'var(--color-on-error)',
-              'error-container': 'var(--color-error-container)',
-              'on-error-container': 'var(--color-on-error-container)',
-              'primary-fixed': 'var(--color-primary-fixed)',
-              'primary-fixed-dim': 'var(--color-primary-fixed-dim)',
-              'on-primary-fixed': 'var(--color-on-primary-fixed)',
-              'on-primary-fixed-variant': 'var(--color-on-primary-fixed-variant)',
-              'secondary-fixed': 'var(--color-secondary-fixed)',
-              'secondary-fixed-dim': 'var(--color-secondary-fixed-dim)',
-              'on-secondary-fixed': 'var(--color-on-secondary-fixed)',
-              'on-secondary-fixed-variant': 'var(--color-on-secondary-fixed-variant)',
-              'tertiary-fixed': 'var(--color-tertiary-fixed)',
-              'tertiary-fixed-dim': 'var(--color-tertiary-fixed-dim)',
-              'on-tertiary-fixed': 'var(--color-on-tertiary-fixed)',
-              'on-tertiary-fixed-variant': 'var(--color-on-tertiary-fixed-variant)',
-              background: 'var(--color-background)',
-              'on-background': 'var(--color-on-background)',
-              'surface-variant': 'var(--color-surface-variant)',
-              'subtle-surface': 'var(--color-subtle-surface)',
-              'border-muted': 'var(--color-border-muted)',
-              'text-tertiary': 'var(--color-text-tertiary)',
-            },
-            borderRadius: {
-              DEFAULT: 'var(--radius-default)',
-              sm: 'var(--radius-sm)',
-              md: 'var(--radius-md)',
-              lg: 'var(--radius-lg)',
-              xl: 'var(--radius-xl)',
-              full: '9999px',
-            },
-            spacing: {
-              'page-margin': '3rem',
-              'section-gap': '2.5rem',
-              'entry-gap': '1.5rem',
-              'inline-gap': '0.5rem',
-              'container-max': '800px',
-              'margin-mobile': '1.5rem',
-            },
-            fontFamily: {
-              'body-sm': ['Inter', 'sans-serif'],
-              'meta-label': ['Inter', 'sans-serif'],
-              'display-lg': ['var(--font-display-lg)', 'sans-serif'],
-              'headline-md': ['var(--font-headline-md)', 'sans-serif'],
-              'body-md': ['var(--font-body-md)', 'sans-serif'],
-              'body-main': ['var(--font-body-md)', 'sans-serif'],
-              'label-caps': ['var(--font-label-caps)', 'sans-serif'],
-              caption: ['var(--font-caption)', 'sans-serif'],
-            },
-            fontSize: {
-              'body-sm': ['13px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
-              'meta-label': ['13px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
-              'display-lg': ['var(--font-size-display-lg)', { lineHeight: 'var(--lh-display-lg)', letterSpacing: 'var(--ls-display-lg)', fontWeight: '700' }],
-              'display-lg-mobile': ['var(--font-size-display-lg-mobile)', { lineHeight: 'var(--lh-display-lg-mobile)', letterSpacing: 'var(--ls-display-lg-mobile)', fontWeight: '700' }],
-              'headline-md': ['var(--font-size-headline-md)', { lineHeight: 'var(--lh-headline-md)', letterSpacing: 'var(--ls-headline-md)', fontWeight: '600' }],
-              'body-md': ['var(--font-size-body-md)', { lineHeight: 'var(--lh-body-md)', letterSpacing: 'var(--ls-body-md)', fontWeight: '400' }],
-              'body-main': ['var(--font-size-body-md)', { lineHeight: 'var(--lh-body-md)', letterSpacing: 'var(--ls-body-md)', fontWeight: '400' }],
-              'label-caps': ['var(--font-size-label-caps)', { lineHeight: 'var(--lh-label-caps)', letterSpacing: 'var(--ls-label-caps)', fontWeight: '500' }],
-              caption: ['var(--font-size-caption)', { lineHeight: 'var(--lh-caption)', fontWeight: '400' }],
-            },
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Sriharsha Dokula | Engineer Portfolio</title>
+  <meta content="Portfolio of Sriharsha Dokula — Full-Stack Developer. Explore projects, certifications, and resume."
+    name="description" />
+  <meta content="#f9f9f9" name="theme-color" id="theme-meta" />
+  <link href="/assets/favicon.png" rel="icon" sizes="32x32" type="image/png" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: 'var(--color-surface)',
+            'surface-dim': 'var(--color-surface-dim)',
+            'surface-bright': 'var(--color-surface-bright)',
+            'surface-container-lowest': 'var(--color-surface-container-lowest)',
+            'surface-container-low': 'var(--color-surface-container-low)',
+            'surface-container': 'var(--color-surface-container)',
+            'surface-container-high': 'var(--color-surface-container-high)',
+            'surface-container-highest': 'var(--color-surface-container-highest)',
+            'on-surface': 'var(--color-on-surface)',
+            'on-surface-variant': 'var(--color-on-surface-variant)',
+            'inverse-surface': 'var(--color-inverse-surface)',
+            'inverse-on-surface': 'var(--color-inverse-on-surface)',
+            outline: 'var(--color-outline)',
+            'outline-variant': 'var(--color-outline-variant)',
+            'surface-tint': 'var(--color-surface-tint)',
+            primary: 'var(--color-primary)',
+            'on-primary': 'var(--color-on-primary)',
+            'primary-container': 'var(--color-primary-container)',
+            'on-primary-container': 'var(--color-on-primary-container)',
+            'inverse-primary': 'var(--color-inverse-primary)',
+            secondary: 'var(--color-secondary)',
+            'on-secondary': 'var(--color-on-secondary)',
+            'secondary-container': 'var(--color-secondary-container)',
+            'on-secondary-container': 'var(--color-on-secondary-container)',
+            tertiary: 'var(--color-tertiary)',
+            'on-tertiary': 'var(--color-on-tertiary)',
+            'tertiary-container': 'var(--color-tertiary-container)',
+            'on-tertiary-container': 'var(--color-on-tertiary-container)',
+            error: 'var(--color-error)',
+            'on-error': 'var(--color-on-error)',
+            'error-container': 'var(--color-error-container)',
+            'on-error-container': 'var(--color-on-error-container)',
+            'primary-fixed': 'var(--color-primary-fixed)',
+            'primary-fixed-dim': 'var(--color-primary-fixed-dim)',
+            'on-primary-fixed': 'var(--color-on-primary-fixed)',
+            'on-primary-fixed-variant': 'var(--color-on-primary-fixed-variant)',
+            'secondary-fixed': 'var(--color-secondary-fixed)',
+            'secondary-fixed-dim': 'var(--color-secondary-fixed-dim)',
+            'on-secondary-fixed': 'var(--color-on-secondary-fixed)',
+            'on-secondary-fixed-variant': 'var(--color-on-secondary-fixed-variant)',
+            'tertiary-fixed': 'var(--color-tertiary-fixed)',
+            'tertiary-fixed-dim': 'var(--color-tertiary-fixed-dim)',
+            'on-tertiary-fixed': 'var(--color-on-tertiary-fixed)',
+            'on-tertiary-fixed-variant': 'var(--color-on-tertiary-fixed-variant)',
+            background: 'var(--color-background)',
+            'on-background': 'var(--color-on-background)',
+            'surface-variant': 'var(--color-surface-variant)',
+            'subtle-surface': 'var(--color-subtle-surface)',
+            'border-muted': 'var(--color-border-muted)',
+            'text-tertiary': 'var(--color-text-tertiary)',
+          },
+          borderRadius: {
+            DEFAULT: 'var(--radius-default)',
+            sm: 'var(--radius-sm)',
+            md: 'var(--radius-md)',
+            lg: 'var(--radius-lg)',
+            xl: 'var(--radius-xl)',
+            full: '9999px',
+          },
+          spacing: {
+            'page-margin': '3rem',
+            'section-gap': '2.5rem',
+            'entry-gap': '1.5rem',
+            'inline-gap': '0.5rem',
+            'container-max': '800px',
+            'margin-mobile': '1.5rem',
+          },
+          fontFamily: {
+            'body-sm': ['Inter', 'sans-serif'],
+            'meta-label': ['Inter', 'sans-serif'],
+            'display-lg': ['var(--font-display-lg)', 'sans-serif'],
+            'headline-md': ['var(--font-headline-md)', 'sans-serif'],
+            'body-md': ['var(--font-body-md)', 'sans-serif'],
+            'body-main': ['var(--font-body-md)', 'sans-serif'],
+            'label-caps': ['var(--font-label-caps)', 'sans-serif'],
+            caption: ['var(--font-caption)', 'sans-serif'],
+          },
+          fontSize: {
+            'body-sm': ['13px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+            'meta-label': ['13px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+            'display-lg': ['var(--font-size-display-lg)', { lineHeight: 'var(--lh-display-lg)', letterSpacing: 'var(--ls-display-lg)', fontWeight: '700' }],
+            'display-lg-mobile': ['var(--font-size-display-lg-mobile)', { lineHeight: 'var(--lh-display-lg-mobile)', letterSpacing: 'var(--ls-display-lg-mobile)', fontWeight: '700' }],
+            'headline-md': ['var(--font-size-headline-md)', { lineHeight: 'var(--lh-headline-md)', letterSpacing: 'var(--ls-headline-md)', fontWeight: '600' }],
+            'body-md': ['var(--font-size-body-md)', { lineHeight: 'var(--lh-body-md)', letterSpacing: 'var(--ls-body-md)', fontWeight: '400' }],
+            'body-main': ['var(--font-size-body-md)', { lineHeight: 'var(--lh-body-md)', letterSpacing: 'var(--ls-body-md)', fontWeight: '400' }],
+            'label-caps': ['var(--font-size-label-caps)', { lineHeight: 'var(--lh-label-caps)', letterSpacing: 'var(--ls-label-caps)', fontWeight: '500' }],
+            caption: ['var(--font-size-caption)', { lineHeight: 'var(--lh-caption)', fontWeight: '400' }],
           },
         },
-      }
-    </script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://www.linkedin.com" rel="preconnect"/>
-<link href="https://github.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://www.linkedin.com" rel="preconnect" />
+  <link href="https://github.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
 </head>
+
 <body class="bg-background text-on-surface font-body-main selection:bg-primary-fixed selection:text-on-primary-fixed">
 
-<!-- ===== TopAppBar ===== -->
-<header class="bg-surface border-b border-outline-variant sticky top-0 z-50">
-<div class="max-w-[800px] mx-auto px-6 md:px-page-margin flex justify-between items-center h-20">
-  <a href="#" class="font-bold text-[24px] uppercase tracking-tighter text-primary no-underline shrink-0" style="font-family:var(--font-display-lg)">SRIHARSHA DOKULA</a>
-  <nav class="hidden md:flex gap-8 items-center">
-    <a class="nav-link text-secondary hover:text-primary transition-colors cursor-pointer font-body-md text-caption" href="#experience">Experience</a>
-    <a class="nav-link text-secondary hover:text-primary transition-colors cursor-pointer font-body-md text-caption" href="#education">Education</a>
-    <a class="nav-link text-secondary hover:text-primary transition-colors cursor-pointer font-body-md text-caption" href="#skills">Skills</a>
-    <a class="nav-link text-secondary hover:text-primary transition-colors cursor-pointer font-body-md text-caption" href="#projects">Projects</a>
-  </nav>
-  <a href="/assets/resume/Sriharsha_Dokula.pdf" download="sriharsha_dokula.pdf" class="bg-primary text-on-primary px-4 py-2 rounded-lg font-caption font-bold cursor-pointer no-underline transition-opacity duration-200 hover:opacity-90" style="font-size:14px">
-    Download CV
-  </a>
-</div>
-</header>
-
-<!-- Theme toggle - floats on right edge -->
-<label id="theme-toggle" class="fixed right-4 md:right-6 top-6 inline-flex items-center cursor-pointer z-50" aria-label="Toggle theme">
-  <input type="checkbox" value="" class="sr-only peer">
-  <div class="w-11 h-6 rounded-full border border-border-muted transition-colors duration-200 flex items-center px-[2px]" style="background:var(--color-surface-container-high)">
-    <span class="h-5 w-5 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm" style="background:var(--color-on-surface)">
-      <span class="material-symbols-outlined text-[11px] light-icon" style="color:var(--color-surface-container-lowest)">light_mode</span>
-      <span class="material-symbols-outlined text-[11px] dark-icon" style="color:var(--color-surface-container-lowest)">dark_mode</span>
-    </span>
-  </div>
-</label>
-
-<!-- ===== Main Content ===== -->
-<main class="max-w-[800px] mx-auto px-6 md:px-page-margin py-12 md:py-16 bg-surface-container-lowest shadow-[0_0_80px_rgba(0,0,0,0.2)] min-h-screen">
-
-  <!-- === Header / Intro === -->
-  <section class="mb-section-gap">
-    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Engineer</h2>
-    <div class="flex flex-wrap gap-x-6 gap-y-2 text-secondary font-caption">
-      <a class="flex items-center gap-1 link-underlined" href="mailto:harshadokula@gmail.com">
-        <span class="material-symbols-outlined text-[16px]">mail</span> harshadokula@gmail.com
+  <!-- ===== TopAppBar ===== -->
+  <header class="bg-surface border-b border-outline-variant sticky top-0 z-50">
+    <div class="max-w-[800px] mx-auto px-6 md:px-page-margin flex justify-between items-center h-20">
+      <a href="#" class="font-bold text-[24px] uppercase tracking-tighter text-primary no-underline shrink-0"
+        style="font-family:var(--font-display-lg)">SRIHARSHA DOKULA</a>
+      <nav class="hidden md:flex gap-8 items-center">
+        <a class="nav-link text-secondary hover:text-primary transition-colors cursor-pointer font-body-md text-caption"
+          href="#experience">Experience</a>
+        <a class="nav-link text-secondary hover:text-primary transition-colors cursor-pointer font-body-md text-caption"
+          href="#education">Education</a>
+        <a class="nav-link text-secondary hover:text-primary transition-colors cursor-pointer font-body-md text-caption"
+          href="#skills">Skills</a>
+        <a class="nav-link text-secondary hover:text-primary transition-colors cursor-pointer font-body-md text-caption"
+          href="#projects">Projects</a>
+      </nav>
+      <a href="/assets/resume/Sriharsha_Dokula.pdf" download="sriharsha_dokula.pdf"
+        class="bg-primary text-on-primary px-4 py-2 rounded-lg font-caption font-bold cursor-pointer no-underline transition-opacity duration-200 hover:opacity-90"
+        style="font-size:14px">
+        Download CV
       </a>
-      <a class="flex items-center gap-1 link-underlined" href="https://www.linkedin.com/in/sriharshadokula/" target="_blank">
-        <span class="material-symbols-outlined text-[16px]">link</span> LinkedIn
-      </a>
-      <a class="flex items-center gap-1 link-underlined" href="https://github.com/HarshaDokula" target="_blank">
-        <span class="material-symbols-outlined text-[16px]">terminal</span> GitHub
-      </a>
-      <span class="flex items-center gap-1">
-        <span class="material-symbols-outlined text-[16px]">location_on</span> Irving, TX
-      </span>
-      <span class="flex items-center gap-1">
-        <span class="material-symbols-outlined text-[16px]">phone</span> (607) 595-7798
+    </div>
+  </header>
+
+  <!-- Theme toggle - floats on right edge -->
+  <label id="theme-toggle" class="fixed right-4 md:right-6 top-6 inline-flex items-center cursor-pointer z-50"
+    aria-label="Toggle theme">
+    <input type="checkbox" value="" class="sr-only peer">
+    <div
+      class="w-11 h-6 rounded-full border border-border-muted transition-colors duration-200 flex items-center px-[2px]"
+      style="background:var(--color-surface-container-high)">
+      <span class="h-5 w-5 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm"
+        style="background:var(--color-on-surface)">
+        <span class="material-symbols-outlined text-[11px] light-icon"
+          style="color:var(--color-surface-container-lowest)">light_mode</span>
+        <span class="material-symbols-outlined text-[11px] dark-icon"
+          style="color:var(--color-surface-container-lowest)">dark_mode</span>
       </span>
     </div>
-  </section>
+  </label>
 
-  <!-- === Professional Summary === -->
-  <section class="mb-section-gap">
-    <div class="flex items-center gap-4 mb-4">
-      <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">SUMMARY</h3>
-      <div class="h-[1px] w-full bg-outline-variant"></div>
-    </div>
-    <p class="font-body-main text-body-main text-on-surface leading-relaxed">
-      Full Stack Developer with 4.5+ years of experience specializing in Python development, cloud infrastructure automation, and DevOps practices. Proven expertise in building scalable backend services, automating cloud deployments, and implementing infrastructure as code solutions. Strong background in cloud platforms (AWS, Azure), containerization (Docker), and configuration management (Ansible), with extensive Python scripting experience for automation and operational efficiency.
-    </p>
-  </section>
+  <!-- ===== Main Content ===== -->
+  <main
+    class="max-w-[800px] mx-auto px-6 md:px-page-margin py-12 md:py-16 bg-surface-container-lowest shadow-[0_0_80px_rgba(0,0,0,0.2)] min-h-screen">
 
-  <!-- === Experience === -->
-  <section class="mb-section-gap" id="experience">
-    <div class="flex items-center gap-4 mb-entry-gap">
-      <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">EXPERIENCE</h3>
-      <div class="h-[1px] w-full bg-outline-variant"></div>
-    </div>
-
-    <!-- Zapcom -->
-    <div class="resume-entry">
-      <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
-        <h4 class="font-headline-md text-[18px] text-primary">Full-Stack Developer</h4>
-        <span class="font-meta-label text-meta-label text-on-surface-variant">Mar 2025 – Present</span>
-      </div>
-      <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Zapcom.ai</div>
-      <ul class="styled-list">
-        <li>Architected and deployed cloud infrastructure using Python automation scripts, implementing infrastructure as code practices for scalable and reproducible deployments across AWS environments</li>
-        <li>Built AI pipelines using Azure ML Studio with Python, enabling automated model training, experimentation, and deployment workflows for enterprise use cases</li>
-        <li>Secured and migrated a compromised production website to a modern cloud-based architecture, implementing infrastructure hardening using AWS WAF, access controls, and best practices with automated deployment pipelines</li>
-      </ul>
-    </div>
-
-    <!-- SUNY Binghamton -->
-    <div class="resume-entry">
-      <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
-        <h4 class="font-headline-md text-[18px] text-primary">Research Assistant</h4>
-        <span class="font-meta-label text-meta-label text-on-surface-variant">Jul 2024 – Mar 2025</span>
-      </div>
-      <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">SUNY Binghamton</div>
-      <ul class="styled-list">
-        <li>Assisted in comprehensive literature review, meticulously gathering and analyzing relevant information for the Tensor-Aware Energy Accounting project under <a href="https://www.cs.binghamton.edu/~davidl/" target="_blank" class="link-underlined text-text-tertiary">Prof. David Liu</a></li>
-        <li>Conducted detailed code reviews across multiple programming languages and design styles to understand engineering requirements, utilizing tools like Git and VS Code</li>
-        <li>Contributing to the development and enhancement of the Tensor-Aware Energy Accounting framework for machine learning</li>
-      </ul>
-    </div>
-
-    <!-- Cognizant SDE -->
-    <div class="resume-entry">
-      <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
-        <h4 class="font-headline-md text-[18px] text-primary">Software Developer</h4>
-        <span class="font-meta-label text-meta-label text-on-surface-variant">Jul 2019 – Dec 2021</span>
-      </div>
-      <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Cognizant</div>
-      <ul class="styled-list">
-        <li>Spearheaded the design, development, and testing of Python automation scripts and REST APIs, significantly reducing manual workload by 85% and improving operational efficiency in Privileged Identity Management (PIM) solutions</li>
-        <li>Automated infrastructure deployment and configuration management using Ansible playbooks and Python scripts, streamlining deployment processes and reducing setup time by 60%</li>
-        <li>Implemented automated workflows utilizing Python and REST APIs, replacing 14 manual maintenance workflows, resulting in significant time and cost savings through infrastructure automation</li>
-        <li>Conceptualized and executed Proof of Concepts (POCs) on CyberArk components including Enterprise Password Vault (EPV), Application Access Manager (AAM), and Privileged Threat Analytics (PTA), validating their effectiveness — which led to the adoption of AAM</li>
-        <li>Utilized Splunk integration for automatic monitoring and automation of daily onboarding of users and accounts to CyberArk, enhancing operational workflows and reducing manual intervention</li>
-        <li>Authored comprehensive documentation outlining post-production technical support procedures, contributing to a 95% decrease in resolution time for post-production technical issues</li>
-        <li>Mentored and trained over 100 interns on CyberArk, ensuring smooth onboarding and fostering a culture of continuous learning and professional development</li>
-      </ul>
-    </div>
-
-    <!-- Cognizant Analyst -->
-    <div class="resume-entry">
-      <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
-        <h4 class="font-headline-md text-[18px] text-primary">Program Analyst</h4>
-        <span class="font-meta-label text-meta-label text-on-surface-variant">Jan 2019 – Jun 2019</span>
-      </div>
-      <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Cognizant</div>
-      <ul class="styled-list">
-        <li>Developed Python-based automation solutions for infrastructure management and monitoring, optimizing operational efficiency and reducing manual effort</li>
-        <li>Implemented automated reporting tool using Python to detect vulnerable systems, providing visualized data for actionable insights across a network of over 10,000 edge nodes</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- === Education === -->
-  <section class="mb-section-gap" id="education">
-    <div class="flex items-center gap-4 mb-entry-gap">
-      <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">EDUCATION</h3>
-      <div class="h-[1px] w-full bg-outline-variant"></div>
-    </div>
-    <div class="space-y-section-gap">
-      <div class="resume-entry">
-        <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
-          <h4 class="font-headline-md text-[18px] text-primary">Binghamton University, SUNY</h4>
-          <span class="font-meta-label text-meta-label text-on-surface-variant">2023 – 2024</span>
-        </div>
-        <div class="font-body-main text-on-surface">Master of Science in Computer Science &bull; CGPA: 3.9/4.00</div>
-        <div class="font-caption text-text-tertiary mt-1 italic">Design &amp; Analysis of Computer Algorithms, Computer Architecture &amp; Organization, Operating Systems, Programming Languages, Database Systems, Hardware and Security Systems, Design Patterns</div>
-      </div>
-      <div class="resume-entry">
-        <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
-          <h4 class="font-headline-md text-[18px] text-primary">GITAM University, India</h4>
-          <span class="font-meta-label text-meta-label text-on-surface-variant">2015 – 2019</span>
-        </div>
-        <div class="font-body-main text-on-surface">Bachelor of Technology in CS &amp; Engineering &bull; GPA: 8.35/10.0</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === Technical Skills === -->
-  <section class="mb-section-gap" id="skills">
-    <div class="flex items-center gap-4 mb-entry-gap">
-      <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">TECHNICAL SKILLS</h3>
-      <div class="h-[1px] w-full bg-outline-variant"></div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-      <div>
-        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Languages &amp; Frameworks</span>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-chip">Python</span>
-          <span class="skill-chip">Java</span>
-          <span class="skill-chip">C++</span>
-          <span class="skill-chip">JavaScript</span>
-          <span class="skill-chip">ReactJS</span>
-          <span class="skill-chip">Redux</span>
-          <span class="skill-chip">TypeScript</span>
-          <span class="skill-chip">Bash</span>
-        </div>
-      </div>
-      <div>
-        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Cloud &amp; DevOps</span>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-chip">AWS</span>
-          <span class="skill-chip">Azure</span>
-          <span class="skill-chip">Ansible</span>
-          <span class="skill-chip">Docker</span>
-          <span class="skill-chip">CI/CD</span>
-          <span class="skill-chip">Git</span>
-          <span class="skill-chip">Linux</span>
-          <span class="skill-chip">IaC</span>
-        </div>
-      </div>
-      <div>
-        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Databases</span>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-chip">SQL</span>
-          <span class="skill-chip">PL/SQL</span>
-          <span class="skill-chip">MongoDB</span>
-        </div>
-      </div>
-      <div>
-        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Additional</span>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-chip">PowerShell</span>
-          <span class="skill-chip">Bash</span>
-          <span class="skill-chip">REST APIs</span>
-          <span class="skill-chip">IaC</span>
-          <span class="skill-chip">VS Code</span>
-          <span class="skill-chip">Jupyter</span>
-          <span class="skill-chip">Vim</span>
-        </div>
-      </div>
-      <div>
-        <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">IAM &amp; Security</span>
-        <div class="flex flex-wrap gap-2">
-          <span class="skill-chip">CyberArk Vault</span>
-          <span class="skill-chip">CPM</span>
-          <span class="skill-chip">PSM</span>
-          <span class="skill-chip">PVWA</span>
-          <span class="skill-chip">AAM</span>
-          <span class="skill-chip">Okta</span>
-          <span class="skill-chip">Splunk</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === Certifications === -->
-  <section class="mb-section-gap" id="certifications">
-    <div class="flex items-center gap-4 mb-entry-gap">
-      <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">CERTIFICATIONS</h3>
-      <div class="h-[1px] w-full bg-outline-variant"></div>
-    </div>
-    <div class="flex flex-col gap-4">
-      <div class="cert-card">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary shrink-0"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        <div>
-          <h4 class="font-headline-md text-[18px] text-primary">CompTIA Security+</h4>
-          <p class="font-caption text-text-tertiary">Cybersecurity core knowledge and skills &bull; Certified 2018</p>
-          <a href="https://www.credly.com/badges/ec73a8c0-b751-4c55-95b3-669e6005d593/public_url" target="_blank" class="font-caption link-underlined text-text-tertiary text-[12px]">Verify</a>
-        </div>
-      </div>
-      <div class="cert-card">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary shrink-0"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-        <div>
-          <h4 class="font-headline-md text-[18px] text-primary">CyberArk Certified Trustee</h4>
-          <p class="font-caption text-text-tertiary">Privileged Access Management (PAM) expertise</p>
-          <span class="font-caption text-text-tertiary text-[12px] opacity-60">Verification link unavailable</span>
-        </div>
-      </div>
-      <div class="cert-card">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary shrink-0"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-        <div>
-          <h4 class="font-headline-md text-[18px] text-primary">GitHub Foundations</h4>
-          <p class="font-caption text-text-tertiary">Version control and collaboration workflows</p>
-          <a href="https://www.credly.com/badges/fa553e14-753e-4067-8ded-70a373e0de93/linked_in_profile" target="_blank" class="font-caption link-underlined text-text-tertiary text-[12px]">Verify</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === Projects === -->
-  <section class="mb-section-gap" id="projects">
-    <div class="flex items-center gap-4 mb-entry-gap">
-      <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">PROJECTS</h3>
-      <div class="h-[1px] w-full bg-outline-variant"></div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- jcarbon -->
-      <div class="project-card">
-        <div class="flex justify-between items-start mb-4">
-          <h4 class="font-headline-md text-[18px] text-primary">jcarbon</h4>
-          <a class="text-secondary hover:text-primary transition-colors" href="https://github.com/project-jcarbon/jcarbon" target="_blank">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
-        </div>
-        <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
-          A Java-based library for system-wide energy usage tracking on Intel-Linux environments, providing actionable metrics for power-aware computing.
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="tag-meta">Java</span>
-          <span class="tag-meta">TensorFlow</span>
-        </div>
-      </div>
-
-      <!-- Quick Draw Clone -->
-      <div class="project-card">
-        <div class="flex justify-between items-start mb-4">
-          <h4 class="font-headline-md text-[18px] text-primary">Quick Draw Clone</h4>
-          <a class="text-secondary hover:text-primary transition-colors" href="https://github.com/sanjaydokula/draw" target="_blank">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
-        </div>
-        <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
-          Browser-based sketch recognition game using public ML models and datasets, replicating Google's "Quick, Draw!" for web environments.
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="tag-meta">HTML/JS</span>
-          <span class="tag-meta">ML/AI</span>
-        </div>
-      </div>
-
-      <!-- xv6 Shared Memory -->
-      <div class="project-card">
-        <div class="flex justify-between items-start mb-4">
-          <h4 class="font-headline-md text-[18px] text-primary">xv6 Shared Memory</h4>
-          <span class="text-secondary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-          </span>
-        </div>
-        <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
-          Extended the xv6 teaching operating system to support shared memory pages between processes via system calls for efficient inter-process communication.
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="tag-meta">C++</span>
-          <span class="tag-meta">Kernel Dev</span>
-        </div>
-      </div>
-
-      <!-- Vulnerability Dashboard -->
-      <div class="project-card">
-        <div class="flex justify-between items-start mb-4">
-          <h4 class="font-headline-md text-[18px] text-primary">Vulnerability Dashboard</h4>
-          <span class="text-secondary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-          </span>
-        </div>
-        <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
-          Built an automated reporting tool to detect and visualize vulnerable systems across a network of 10,000+ edge nodes, providing actionable insights for remediation.
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <span class="tag-meta">Python</span>
-        </div>
-      </div>
-
-      <!-- CTA box -->
-      <div class="cta-box">
-        <p class="text-center font-caption mb-4 text-secondary">Looking for the full offline version?</p>
-        <a href="/assets/resume/Sriharsha_Dokula.pdf" download="sriharsha_dokula.pdf" class="bg-primary text-on-primary px-6 py-2 font-bold font-caption no-underline transition-transform hover:scale-105" style="border-radius:var(--radius-default)">
-          Download PDF
+    <!-- === Header / Intro === -->
+    <section class="mb-section-gap">
+      <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Software Engineer</h2>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-secondary font-caption">
+        <a class="flex items-center gap-1 link-underlined" href="mailto:harshadokula@gmail.com">
+          <span class="material-symbols-outlined text-[16px]">mail</span> harshadokula@gmail.com
         </a>
+        <a class="flex items-center gap-1 link-underlined" href="https://www.linkedin.com/in/sriharshadokula/"
+          target="_blank">
+          <span class="material-symbols-outlined text-[16px]">link</span> LinkedIn
+        </a>
+        <a class="flex items-center gap-1 link-underlined" href="https://github.com/HarshaDokula" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">terminal</span> GitHub
+        </a>
+        <span class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">location_on</span> Irving, TX
+        </span>
+        <span class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">phone</span> (607) 595-7798
+        </span>
       </div>
+    </section>
+
+    <!-- === Professional Summary === -->
+    <section class="mb-section-gap">
+      <div class="flex items-center gap-4 mb-4">
+        <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">SUMMARY
+        </h3>
+        <div class="h-[1px] w-full bg-outline-variant"></div>
+      </div>
+      <p class="font-body-main text-body-main text-on-surface leading-relaxed">
+        Full Stack Developer with 4.5+ years of experience specializing in Python development, cloud infrastructure
+        automation, and DevOps practices. Proven expertise in building scalable backend services, automating cloud
+        deployments, and implementing infrastructure as code solutions. Strong background in cloud platforms (AWS,
+        Azure), containerization (Docker), and configuration management (Ansible), with extensive Python scripting
+        experience for automation and operational efficiency.
+      </p>
+    </section>
+
+    <!-- === Experience === -->
+    <section class="mb-section-gap" id="experience">
+      <div class="flex items-center gap-4 mb-entry-gap">
+        <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">EXPERIENCE
+        </h3>
+        <div class="h-[1px] w-full bg-outline-variant"></div>
+      </div>
+
+      <!-- Zapcom -->
+      <div class="resume-entry">
+        <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+          <h4 class="font-headline-md text-[18px] text-primary">Full-Stack Developer</h4>
+          <span class="font-meta-label text-meta-label text-on-surface-variant">Mar 2025 – Present</span>
+        </div>
+        <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Zapcom.ai</div>
+        <ul class="styled-list">
+          <li>Architected and deployed cloud infrastructure using Python automation scripts, implementing infrastructure
+            as code practices for scalable and reproducible deployments across AWS environments</li>
+          <li>Built AI pipelines using Azure ML Studio with Python, enabling automated model training, experimentation,
+            and deployment workflows for enterprise use cases</li>
+          <li>Secured and migrated a compromised production website to a modern cloud-based architecture, implementing
+            infrastructure hardening using AWS WAF, access controls, and best practices with automated deployment
+            pipelines</li>
+        </ul>
+      </div>
+
+      <!-- SUNY Binghamton -->
+      <div class="resume-entry">
+        <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+          <h4 class="font-headline-md text-[18px] text-primary">Research Assistant</h4>
+          <span class="font-meta-label text-meta-label text-on-surface-variant">Jul 2024 – Mar 2025</span>
+        </div>
+        <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">SUNY Binghamton</div>
+        <ul class="styled-list">
+          <li>Assisted in comprehensive literature review, meticulously gathering and analyzing relevant information for
+            the Tensor-Aware Energy Accounting project under <a href="https://www.cs.binghamton.edu/~davidl/"
+              target="_blank" class="link-underlined text-text-tertiary">Prof. David Liu</a></li>
+          <li>Conducted detailed code reviews across multiple programming languages and design styles to understand
+            engineering requirements, utilizing tools like Git and VS Code</li>
+          <li>Contributing to the development and enhancement of the Tensor-Aware Energy Accounting framework for
+            machine learning</li>
+        </ul>
+      </div>
+
+      <!-- Cognizant SDE -->
+      <div class="resume-entry">
+        <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+          <h4 class="font-headline-md text-[18px] text-primary">Software Developer</h4>
+          <span class="font-meta-label text-meta-label text-on-surface-variant">Jul 2019 – Dec 2021</span>
+        </div>
+        <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Cognizant</div>
+        <ul class="styled-list">
+          <li>Spearheaded the design, development, and testing of Python automation scripts and REST APIs, significantly
+            reducing manual workload by 85% and improving operational efficiency in Privileged Identity Management (PIM)
+            solutions</li>
+          <li>Automated infrastructure deployment and configuration management using Ansible playbooks and Python
+            scripts, streamlining deployment processes and reducing setup time by 60%</li>
+          <li>Implemented automated workflows utilizing Python and REST APIs, replacing 14 manual maintenance workflows,
+            resulting in significant time and cost savings through infrastructure automation</li>
+          <li>Conceptualized and executed Proof of Concepts (POCs) on CyberArk components including Enterprise Password
+            Vault (EPV), Application Access Manager (AAM), and Privileged Threat Analytics (PTA), validating their
+            effectiveness — which led to the adoption of AAM</li>
+          <li>Utilized Splunk integration for automatic monitoring and automation of daily onboarding of users and
+            accounts to CyberArk, enhancing operational workflows and reducing manual intervention</li>
+          <li>Authored comprehensive documentation outlining post-production technical support procedures, contributing
+            to a 95% decrease in resolution time for post-production technical issues</li>
+          <li>Mentored and trained over 100 interns on CyberArk, ensuring smooth onboarding and fostering a culture of
+            continuous learning and professional development</li>
+        </ul>
+      </div>
+
+      <!-- Cognizant Analyst -->
+      <div class="resume-entry">
+        <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+          <h4 class="font-headline-md text-[18px] text-primary">Program Analyst</h4>
+          <span class="font-meta-label text-meta-label text-on-surface-variant">Jan 2019 – Jun 2019</span>
+        </div>
+        <div class="font-body-main font-bold text-[var(--color-text-tertiary)] mb-3">Cognizant</div>
+        <ul class="styled-list">
+          <li>Developed Python-based automation solutions for infrastructure management and monitoring, optimizing
+            operational efficiency and reducing manual effort</li>
+          <li>Implemented automated reporting tool using Python to detect vulnerable systems, providing visualized data
+            for actionable insights across a network of over 10,000 edge nodes</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- === Education === -->
+    <section class="mb-section-gap" id="education">
+      <div class="flex items-center gap-4 mb-entry-gap">
+        <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">EDUCATION
+        </h3>
+        <div class="h-[1px] w-full bg-outline-variant"></div>
+      </div>
+      <div class="space-y-section-gap">
+        <div class="resume-entry">
+          <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+            <h4 class="font-headline-md text-[18px] text-primary">Binghamton University, SUNY</h4>
+            <span class="font-meta-label text-meta-label text-on-surface-variant">2023 – 2024</span>
+          </div>
+          <div class="font-body-main text-on-surface">Master of Science in Computer Science &bull; CGPA: 3.9/4.00</div>
+          <div class="font-caption text-text-tertiary mt-1 italic">Design &amp; Analysis of Computer Algorithms,
+            Computer Architecture &amp; Organization, Operating Systems, Programming Languages, Database Systems,
+            Hardware and Security Systems, Design Patterns</div>
+        </div>
+        <div class="resume-entry">
+          <div class="flex flex-col md:flex-row md:justify-between items-baseline mb-2">
+            <h4 class="font-headline-md text-[18px] text-primary">GITAM University, India</h4>
+            <span class="font-meta-label text-meta-label text-on-surface-variant">2015 – 2019</span>
+          </div>
+          <div class="font-body-main text-on-surface">Bachelor of Technology in CS &amp; Engineering &bull; GPA:
+            8.35/10.0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Technical Skills === -->
+    <section class="mb-section-gap" id="skills">
+      <div class="flex items-center gap-4 mb-entry-gap">
+        <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">TECHNICAL
+          SKILLS</h3>
+        <div class="h-[1px] w-full bg-outline-variant"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+        <div>
+          <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Languages &amp;
+            Frameworks</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">Java</span>
+            <span class="skill-chip">C++</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">ReactJS</span>
+            <span class="skill-chip">Redux</span>
+            <span class="skill-chip">TypeScript</span>
+            <span class="skill-chip">Bash</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Cloud &amp;
+            DevOps</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">AWS</span>
+            <span class="skill-chip">Azure</span>
+            <span class="skill-chip">Ansible</span>
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">CI/CD</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">Linux</span>
+            <span class="skill-chip">IaC</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Databases</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">SQL</span>
+            <span class="skill-chip">PL/SQL</span>
+            <span class="skill-chip">MongoDB</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">Additional</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">PowerShell</span>
+            <span class="skill-chip">Bash</span>
+            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">IaC</span>
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">Jupyter</span>
+            <span class="skill-chip">Vim</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-meta-label text-meta-label text-on-surface-variant block mb-3 uppercase">IAM &amp;
+            Security</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-chip">CyberArk Vault</span>
+            <span class="skill-chip">CPM</span>
+            <span class="skill-chip">PSM</span>
+            <span class="skill-chip">PVWA</span>
+            <span class="skill-chip">AAM</span>
+            <span class="skill-chip">Okta</span>
+            <span class="skill-chip">Splunk</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Certifications === -->
+    <section class="mb-section-gap" id="certifications">
+      <div class="flex items-center gap-4 mb-entry-gap">
+        <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">
+          CERTIFICATIONS</h3>
+        <div class="h-[1px] w-full bg-outline-variant"></div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="cert-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="text-primary shrink-0">
+            <path
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <div>
+            <h4 class="font-headline-md text-[18px] text-primary">CompTIA Security+</h4>
+            <p class="font-caption text-text-tertiary">Cybersecurity core knowledge and skills &bull; Certified 2018</p>
+            <a href="https://www.credly.com/badges/ec73a8c0-b751-4c55-95b3-669e6005d593/public_url" target="_blank"
+              class="font-caption link-underlined text-text-tertiary text-[12px]">Verify</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="text-primary shrink-0">
+            <path
+              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          <div>
+            <h4 class="font-headline-md text-[18px] text-primary">CyberArk Certified Trustee</h4>
+            <p class="font-caption text-text-tertiary">Privileged Access Management (PAM) expertise</p>
+            <span class="font-caption text-text-tertiary text-[12px] opacity-60">Verification link unavailable</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="text-primary shrink-0">
+            <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+          <div>
+            <h4 class="font-headline-md text-[18px] text-primary">GitHub Foundations</h4>
+            <p class="font-caption text-text-tertiary">Version control and collaboration workflows</p>
+            <a href="https://www.credly.com/badges/fa553e14-753e-4067-8ded-70a373e0de93/linked_in_profile"
+              target="_blank" class="font-caption link-underlined text-text-tertiary text-[12px]">Verify</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Projects === -->
+    <section class="mb-section-gap" id="projects">
+      <div class="flex items-center gap-4 mb-entry-gap">
+        <h3 class="font-label-caps text-label-caps text-primary whitespace-nowrap uppercase tracking-widest">PROJECTS
+        </h3>
+        <div class="h-[1px] w-full bg-outline-variant"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- jcarbon -->
+        <div class="project-card">
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="font-headline-md text-[18px] text-primary">jcarbon</h4>
+            <a class="text-secondary hover:text-primary transition-colors"
+              href="https://github.com/project-jcarbon/jcarbon" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+              </svg>
+            </a>
+          </div>
+          <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
+            A Java-based library for system-wide energy usage tracking on Intel-Linux environments, providing actionable
+            metrics for power-aware computing.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag-meta">Java</span>
+            <span class="tag-meta">TensorFlow</span>
+          </div>
+        </div>
+
+        <!-- Quick Draw Clone -->
+        <div class="project-card">
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="font-headline-md text-[18px] text-primary">Quick Draw Clone</h4>
+            <a class="text-secondary hover:text-primary transition-colors" href="https://github.com/sanjaydokula/draw"
+              target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+              </svg>
+            </a>
+          </div>
+          <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
+            Browser-based sketch recognition game using public ML models and datasets, replicating Google's "Quick,
+            Draw!" for web environments.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag-meta">HTML/JS</span>
+            <span class="tag-meta">ML/AI</span>
+          </div>
+        </div>
+
+        <!-- xv6 Shared Memory -->
+        <div class="project-card">
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="font-headline-md text-[18px] text-primary">xv6 Shared Memory</h4>
+            <span class="text-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </span>
+          </div>
+          <p class="font-caption text-on-surface-variant mb-4 leading-relaxed">
+            Extended the xv6 teaching operating system to support shared memory pages between processes via system calls
+            for efficient inter-process communication.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag-meta">C++</span>
+            <span class="tag-meta">Kernel Dev</span>
+          </div>
+        </div>
+
+        <!-- CTA box -->
+        <div class="cta-box">
+          <p class="text-center font-caption mb-4 text-secondary">Looking for the full offline version?</p>
+          <a href="/assets/resume/Sriharsha_Dokula.pdf" download="sriharsha_dokula.pdf"
+            class="bg-primary text-on-primary px-6 py-2 font-bold font-caption no-underline transition-transform hover:scale-105"
+            style="border-radius:var(--radius-default)">
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-surface-container-lowest border-t border-border-muted">
+    <div
+      class="max-w-[800px] mx-auto px-6 md:px-page-margin py-entry-gap flex flex-col md:flex-row justify-between items-center gap-4">
+      <span class="font-meta-label text-meta-label text-text-tertiary uppercase tracking-wider">SRIHARSHA DOKULA</span>
+      <div class="flex gap-6 items-center">
+        <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100"
+          href="https://github.com/HarshaDokula" target="_blank">GitHub</a>
+        <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100"
+          href="https://www.linkedin.com/in/sriharshadokula/" target="_blank">LinkedIn</a>
+        <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100"
+          href="mailto:harshadokula@gmail.com">Email</a>
+      </div>
+      <p class="font-caption text-text-tertiary opacity-60">&copy; 2026 Sriharsha Dokula. Built using AI</p>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<!-- ===== Footer ===== -->
-<footer class="bg-surface-container-lowest border-t border-border-muted">
-<div class="max-w-[800px] mx-auto px-6 md:px-page-margin py-entry-gap flex flex-col md:flex-row justify-between items-center gap-4">
-  <span class="font-meta-label text-meta-label text-text-tertiary uppercase tracking-wider">SRIHARSHA DOKULA</span>
-  <div class="flex gap-6 items-center">
-    <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100" href="https://github.com/HarshaDokula" target="_blank">GitHub</a>
-    <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/sriharshadokula/" target="_blank">LinkedIn</a>
-    <a class="font-caption text-text-tertiary hover:text-primary underline transition-all opacity-80 hover:opacity-100" href="mailto:harshadokula@gmail.com">Email</a>
-  </div>
-  <p class="font-caption text-text-tertiary opacity-60">&copy; 2026 Sriharsha Dokula. Built with precision.</p>
-</div>
-</footer>
-
-<script src="script.js"></script>
-<script src="gtag.js"></script>
+  <script src="script.js"></script>
+  <script src="gtag.js"></script>
 </body>
+
 </html>
