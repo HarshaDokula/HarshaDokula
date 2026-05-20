@@ -143,19 +143,22 @@
           href="#projects">Projects</a>
       </nav>
       <a href="/assets/resume/Sriharsha_Dokula.pdf" download="sriharsha_dokula.pdf"
-        class="bg-primary text-on-primary px-4 py-2 rounded-lg font-caption font-bold cursor-pointer no-underline transition-opacity duration-200 hover:opacity-90"
+        class="bg-primary text-on-primary p-2 md:px-4 md:py-2 rounded-lg font-caption font-bold cursor-pointer no-underline transition-opacity duration-200 hover:opacity-90 inline-flex items-center justify-center"
         style="font-size:14px">
-        Download CV
+        <span class="material-symbols-outlined md:hidden" style="font-size:20px">download</span>
+        <span class="hidden md:inline">Download CV</span>
       </a>
     </div>
   </header>
 
   <!-- Theme toggle - floats on right edge -->
-  <label id="theme-toggle" class="fixed right-4 md:right-6 top-6 inline-flex items-center cursor-pointer z-50"
+  <label id="theme-toggle" class="fixed bottom-6 right-4 md:top-6 md:right-6 inline-flex items-center cursor-pointer z-50"
     aria-label="Toggle theme">
     <input type="checkbox" value="" class="sr-only peer">
+    <span class="material-symbols-outlined md:hidden p-2.5 rounded-xl border border-border-muted lightbulb-icon"
+      style="font-size:22px;background:var(--color-surface-container-high)">lightbulb</span>
     <div
-      class="w-11 h-6 rounded-full border border-border-muted transition-colors duration-200 flex items-center px-[2px]"
+      class="hidden md:flex w-11 h-6 rounded-full border border-border-muted transition-colors duration-200 items-center px-[2px]"
       style="background:var(--color-surface-container-high)">
       <span class="h-5 w-5 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm"
         style="background:var(--color-on-surface)">
